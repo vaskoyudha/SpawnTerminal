@@ -30,3 +30,9 @@ done
 tmux select-layout -t "$session_name" tiled
 # Attach only if stdin is a TTY: [[ -t 0 ]]
 ```
+
+## [Task 2 complete] Core st script
+- Session naming pattern: st-{first_word}-{N}
+- Attach gate: [[ -t 0 ]] && tmux attach-session
+- split-window loop: seq 2 $N (skips for N=1)
+- send-keys after EACH split (not after all splits)

@@ -1,0 +1,3 @@
+PASS
+st: Bourne-Again shell script, ASCII text executable
+#!/usr/bin/env bash
