@@ -1,0 +1,12 @@
+QA2: Missing preset → error message
+===
+$ ./st --detach --preset nonexistent 2>&1; echo "exit: $?"
+Error: Preset 'nonexistent' not found. No presets available. Run 'st init' to create example presets.
+exit: 1
+PASS: contains 'not found', exit code 1
+
+With available preset:
+$ ./st --detach --preset nonexistent 2>&1; echo "exit: $?"  (with foo.yaml in config)
+Error: Preset 'nonexistent' not found. Available presets: foo
+exit: 1
+PASS: lists available presets

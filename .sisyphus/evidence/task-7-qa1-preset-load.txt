@@ -1,0 +1,11 @@
+QA1: Load preset from config dir
+===
+$ mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/st"
+$ printf 'name: testpreset\npanes: 3\ncommand: echo hello\nlayout: tiled\n' > "${XDG_CONFIG_HOME:-$HOME/.config}/st/testpreset.yaml"
+$ ./st --detach --preset testpreset
+Session 'st-testpreset' created with 3 panes (detached). Attach with: tmux attach -t st-testpreset
+$ tmux has-session -t st-testpreset && echo "PASS" || echo "FAIL"
+PASS: session exists
+$ tmux list-panes -t st-testpreset | wc -l
+Pane count: 3 (expected 3)
+PASS: pane count

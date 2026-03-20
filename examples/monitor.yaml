@@ -1,0 +1,4 @@
+name: monitor
+panes: 6
+command: htop
+layout: even-horizontal

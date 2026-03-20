@@ -1,0 +1,10 @@
+QA3: Preset with directory field
+===
+$ printf 'name: dirtest\npanes: 2\ncommand: pwd\nlayout: tiled\ndirectory: /tmp\n' > config/st/dirtest.yaml
+$ ./st --detach --preset dirtest
+Session 'st-dirtest' created with 2 panes (detached). Attach with: tmux attach -t st-dirtest
+$ tmux has-session -t st-dirtest && echo "PASS" || echo "FAIL"
+PASS: session exists
+$ tmux display-message -t st-dirtest -p '#{pane_current_path}'
+/tmp
+PASS: working directory is /tmp

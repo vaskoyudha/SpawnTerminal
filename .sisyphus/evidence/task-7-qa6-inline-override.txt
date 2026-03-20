@@ -1,0 +1,12 @@
+QA6: Inline args override preset values
+===
+Preset: panes=2, command="echo preset"
+Inline: 3 "echo inline"
+$ ./st --detach --preset override 3 "echo inline"
+Session 'st-override' created with 3 panes (detached). Attach with: tmux attach -t st-override
+$ tmux list-panes -t st-override | wc -l
+Pane count: 3 (expected 3, not preset's 2)
+PASS: pane count overridden by inline arg
+
+Note: Original spec used 5 panes but terminal too small in headless env.
+The logic is the same: inline N (3) overrides preset N (2).

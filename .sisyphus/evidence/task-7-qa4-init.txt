@@ -1,0 +1,12 @@
+QA4: st init creates config dir + example presets
+===
+$ mv ~/.config/st ~/.config/st.bak
+$ ./st init
+Config directory created at /home/vascosera/.config/st. Example presets copied.
+$ test -d ~/.config/st && echo "PASS" || echo "FAIL"
+PASS: dir exists
+$ ls ~/.config/st/*.yaml | wc -l
+YAML files: 2 (expected >= 2)
+PASS: preset files
+$ ls ~/.config/st/
+dev.yaml  monitor.yaml

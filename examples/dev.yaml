@@ -1,0 +1,4 @@
+name: dev
+panes: 4
+command: opencode
+layout: tiled

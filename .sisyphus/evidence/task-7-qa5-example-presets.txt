@@ -1,0 +1,22 @@
+QA5: Example preset files exist with required fields
+===
+$ test -f examples/dev.yaml && echo "PASS" || echo "FAIL"
+PASS: dev.yaml exists
+$ test -f examples/monitor.yaml && echo "PASS" || echo "FAIL"
+PASS: monitor.yaml exists
+$ grep checks on dev.yaml (name, panes, command)
+PASS: dev.yaml has required fields
+$ grep checks on monitor.yaml (name, panes, command)
+PASS: monitor.yaml has required fields
+
+dev.yaml content:
+  name: dev
+  panes: 4
+  command: opencode
+  layout: tiled
+
+monitor.yaml content:
+  name: monitor
+  panes: 6
+  command: htop
+  layout: even-horizontal
