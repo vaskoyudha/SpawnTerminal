@@ -1,0 +1,3 @@
+Pane count: 4
+Pane output: (echo second executed)
+FRESH_PANES: PASS

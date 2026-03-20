@@ -1,0 +1,4 @@
+exit: 1
+Output: Error: session name must not contain ':' or '.'
+ERROR_MSG: PASS
+SESSION_EXIST: PASS
