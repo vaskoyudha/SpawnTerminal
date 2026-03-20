@@ -1,0 +1,19 @@
+QA Scenario 4: st kill specific session
+========================================
+Date: 2026-03-20
+
+Commands:
+  tmux kill-server
+  ./st --detach 4 "echo hello"
+  ./st kill st-echo-4
+
+Output:
+  Session 'st-echo-4' created with 4 panes (detached). Attach with: tmux attach -t st-echo-4
+  Exit: 0
+  Output: Session 'st-echo-4' killed.
+
+Results:
+  KILL_MSG: PASS
+  KILLED: PASS
+
+Verdict: ALL PASS

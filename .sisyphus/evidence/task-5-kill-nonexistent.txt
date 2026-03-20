@@ -1,0 +1,15 @@
+QA Scenario 5: st kill non-existent session
+=============================================
+Date: 2026-03-20
+
+Commands:
+  tmux kill-server
+  ./st kill st-nonexistent
+
+Output:
+  Error: Session 'st-nonexistent' not found.
+
+Results:
+  NOT_FOUND: PASS
+
+Verdict: ALL PASS

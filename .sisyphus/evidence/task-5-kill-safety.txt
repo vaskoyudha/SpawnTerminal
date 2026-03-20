@@ -1,0 +1,16 @@
+QA Scenario 6: st kill safety guardrail
+========================================
+Date: 2026-03-20
+
+Commands:
+  tmux new-session -d -s "user-manual-session"
+  ./st kill user-manual-session
+
+Output:
+  Error: Refusing to kill 'user-manual-session': not an st session (must start with 'st-')
+
+Results:
+  SAFETY: PASS
+  PRESERVED: PASS (user-manual-session still exists after refused kill)
+
+Verdict: ALL PASS

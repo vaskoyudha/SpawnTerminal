@@ -1,0 +1,36 @@
+QA Scenario 7: st help subcommand
+===================================
+Date: 2026-03-20
+
+Commands:
+  OUTPUT1=$(./st help 2>&1)
+  OUTPUT2=$(./st --help 2>&1)
+  [[ "$OUTPUT1" == "$OUTPUT2" ]]
+
+Output:
+  Usage: st <panes> <command> [options]
+         st list
+         st kill <session-name> | --all
+         st help
+
+  Spawn a tmux grid layout with <panes> panes, each running <command>.
+
+  Examples:
+    st 4 opencode          # 2x2 grid, each pane runs opencode
+    st 6 htop              # 3x2 grid, each pane runs htop
+    st --name dev 4 vim    # Named session: st-dev
+    st --detach 4 opencode # Create without attaching
+    st list                # List all st sessions
+    st kill st-opencode-4  # Kill a session
+
+  Options:
+    -h, --help             Show this help message
+    -d, --detach           Create session without attaching
+    -f, --fresh            Kill existing session and create a fresh one
+    -F, --force            Allow creating more than 16 panes
+    -n, --name <name>      Set a custom session name (prefixed with st-)
+
+Results:
+  HELP_MATCH: PASS
+
+Verdict: ALL PASS

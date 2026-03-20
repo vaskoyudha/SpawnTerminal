@@ -1,0 +1,22 @@
+QA Scenario 2: st list shows sessions
+======================================
+Date: 2026-03-20
+
+Commands:
+  tmux kill-server
+  ./st --detach 4 "echo hello"
+  ./st --detach --name testlist 2 "echo world"
+  ./st list
+
+Output:
+  Session 'st-echo-4' created with 4 panes (detached). Attach with: tmux attach -t st-echo-4
+  Session 'st-testlist' created with 2 panes (detached). Attach with: tmux attach -t st-testlist
+  Active st sessions:
+    st-echo-4: 1 window(s), detached
+    st-testlist: 1 window(s), detached
+
+Results:
+  HAS_ECHO4: PASS
+  HAS_TESTLIST: PASS
+
+Verdict: ALL PASS

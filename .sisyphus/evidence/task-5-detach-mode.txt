@@ -1,0 +1,14 @@
+QA Scenario 1: --detach mode
+=============================
+Date: 2026-03-20
+
+Command: ./st --detach 4 "echo hello"
+
+Output:
+Exit: 0, Output: Session 'st-echo-4' created with 4 panes (detached). Attach with: tmux attach -t st-echo-4
+EXIT_CODE: PASS
+SESSION: PASS
+Panes: 4
+PANE_COUNT: PASS
+
+Verdict: ALL PASS

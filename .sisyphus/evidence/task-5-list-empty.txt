@@ -1,0 +1,15 @@
+QA Scenario 3: st list empty
+=============================
+Date: 2026-03-20
+
+Commands:
+  tmux kill-server
+  ./st list
+
+Output:
+  No active st sessions.
+
+Results:
+  EMPTY_MSG: PASS
+
+Verdict: ALL PASS
