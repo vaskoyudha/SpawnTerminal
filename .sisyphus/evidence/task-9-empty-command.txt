@@ -1,0 +1,2 @@
+Session 'st-cmd-3' created with 3 panes (detached). Attach with: tmux attach -t st-cmd-3
+exit: 0

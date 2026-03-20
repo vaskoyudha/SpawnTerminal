@@ -320,7 +320,7 @@ fi
 
 tmux new-session -d -s "$session_name" -c "$WORK_DIR"
 tmux send-keys -t "$session_name" "$command" Enter
-for i in $(seq 2 "$N"); do
+for _ in $(seq 2 "$N"); do
   if ! tmux split-window -t "$session_name" -c "$WORK_DIR" 2>/dev/null; then
     tmux kill-session -t "$session_name" 2>/dev/null || true
     die "Terminal too small for $N panes. Try reducing pane count or maximizing your terminal."

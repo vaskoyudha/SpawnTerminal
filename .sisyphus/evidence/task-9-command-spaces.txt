@@ -1,0 +1,4 @@
+Session 'st-echo-2' created with 2 panes (detached). Attach with: tmux attach -t st-echo-2
+PASS: session
+2
+PASS: output

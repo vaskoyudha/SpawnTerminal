@@ -1,0 +1,15 @@
+Session 'st-echo-2' created with 2 panes (detached). Attach with: tmux attach -t st-echo-2
+grid: PASS
+Session 'st-echo-2' created with 2 panes (detached). Attach with: tmux attach -t st-echo-2
+fresh: PASS
+Session 'st-regtest' created with 2 panes (detached). Attach with: tmux attach -t st-regtest
+name: PASS
+list: PASS
+Session 'st-regtest' killed.
+kill: PASS
+Session 'st-echo-2' already exists (detached). Attach with: tmux attach -t st-echo-2
+layout: PASS
+invalid-layout: PASS
+help: PASS
+Session 'st-regtest' created with 2 panes (detached). Attach with: tmux attach -t st-regtest
+preset: PASS
