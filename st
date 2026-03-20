@@ -45,4 +45,6 @@ for i in $(seq 2 "$N"); do
 done
 tmux select-layout -t "$session_name" tiled
 
-[[ -t 0 ]] && tmux attach-session -t "$session_name"
+if [[ -t 0 ]]; then
+  tmux attach-session -t "$session_name"
+fi
